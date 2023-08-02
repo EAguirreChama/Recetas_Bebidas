@@ -7,6 +7,11 @@
     const store = useBebidasStore()
 
     const paginaInicio = computed(() => route.name === 'inicio')
+
+    const handleSubmit = () => {
+        store.obtenerRecetas()
+    }
+
 </script>
 
 <template>
@@ -40,8 +45,9 @@
             </div>
 
             <form 
+                v-if="paginaInicio" 
                 class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
-                v-if="paginaInicio"
+                @submit.prevent="handleSubmit"
             >
                 <div class="space-y-4">
                     <label 
