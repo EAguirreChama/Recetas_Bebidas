@@ -10,7 +10,7 @@
 
 <template>
 
-    <h1 class="text-6xl font-extrabold">Favoritos</h1>
+    <h1 class="text-6xl font-extrabold text-center">Favoritos</h1>
 
     <p v-if="favoritos.noFavoritos" class="my-10 text-center text-2xl">No hay Favoritos</p>
 
