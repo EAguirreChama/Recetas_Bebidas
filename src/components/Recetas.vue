@@ -8,6 +8,7 @@
             type: Object
         }
     })
+    
 </script>
 
 <template>
