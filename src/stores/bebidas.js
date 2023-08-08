@@ -1,15 +1,19 @@
 import { ref, reactive, onMounted } from 'vue';
 import { defineStore} from 'pinia';
 import axios from 'axios';
+import { useModalStore } from './modal'
+
 import APIService from '../services/APIService';
 
 export const useBebidasStore = defineStore('bebidas', () => {
+    const modal = useModalStore();
     const categorias = ref([]);
     const busqueda = reactive ({
         nombre: '',
         categoria: ''
     })
     const recetas = ref([])
+    const receta = ref({})
 
     onMounted(async function () {
         const {data: {drinks}} = await APIService.obtenerCategorias()
@@ -24,13 +28,17 @@ export const useBebidasStore = defineStore('bebidas', () => {
 
     async function seleccionarBebida(id) {
         const {data: {drinks}} = await APIService.buscarReceta(id)
+        receta.value = drinks[0]
+
+        modal.handleClickModal()
     }
 
     return {
         categorias,
         busqueda,
-        obtenerRecetas,
         recetas,
+        receta,
+        obtenerRecetas,
         seleccionarBebida
     }
 })
