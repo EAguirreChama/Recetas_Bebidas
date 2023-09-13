@@ -1,7 +1,6 @@
 <script setup>
     import { useBebidasStore } from '../stores/bebidas';
     import Recetas from '../components/Recetas.vue';
-
     const bebidas = useBebidasStore();
 </script>
 
