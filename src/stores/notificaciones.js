@@ -28,5 +28,4 @@ export const useNotificacionStore = defineStore('notificacion', () => {
         error,
         mostrar,
     }
-
 })
