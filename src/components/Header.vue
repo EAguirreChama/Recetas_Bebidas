@@ -1,6 +1,7 @@
 <script setup>
     import { RouterLink, useRoute } from 'vue-router'
     import { computed} from 'vue'
+    
     import { useBebidasStore } from '../stores/bebidas'
     import { useNotificacionStore } from '../stores/notificaciones'
 
@@ -15,12 +16,10 @@
             notificaciones.texto = 'Todos los campos son obligatorios'
             notificaciones.mostrar = true
             notificaciones.error = true 
-
             return
         }
         store.obtenerRecetas()
     }
-
 </script>
 
 <template>
@@ -28,9 +27,7 @@
         <div class="mx:auto container px-5 py-16">
             <div class="flex justify-between items-center">
                 <div>
-                    <RouterLink
-                        :to="{name: 'inicio'}"
-                    >
+                    <RouterLink :to="{name: 'inicio'}">
                         <img class="w-32" src="../../public/img/logo.svg" alt="Logotipo">
                     </RouterLink>
                 </div>
@@ -65,6 +62,7 @@
                     >
                         Nombre o Ingredientes
                     </label>
+                    
                     <input 
                         id="ingrediente"
                         type="text"
@@ -80,6 +78,7 @@
                     >
                         Categoría
                     </label>
+                    
                     <select 
                         id="categoria"
                         class="p-3 w-full rounded-lg focus:outline-none"
