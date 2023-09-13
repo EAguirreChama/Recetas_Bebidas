@@ -10,4 +10,4 @@ export default {
     buscarReceta(id) {
         return api(`/lookup.php?i=${id}`)
     }
-}
+};
