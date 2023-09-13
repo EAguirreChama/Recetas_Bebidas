@@ -7,8 +7,7 @@
         receta: {
             type: Object
         }
-    })
-    
+    })  
 </script>
 
 <template>
