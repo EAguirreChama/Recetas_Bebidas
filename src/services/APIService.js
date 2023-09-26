@@ -1,4 +1,4 @@
-import api from "../lib/axios";
+import api from "../lib/axios"
 
 export default {
     obtenerCategorias() {
@@ -10,4 +10,4 @@ export default {
     buscarReceta(id) {
         return api(`/lookup.php?i=${id}`)
     }
-};
+}
