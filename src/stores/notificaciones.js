@@ -3,9 +3,9 @@ import { defineStore } from "pinia"
 
 export const useNotificacionStore = defineStore('notificacion', () => {
 
-    const texto = ref('');
-    const error = ref(false);
-    const mostrar = ref(false);
+    const texto = ref('')
+    const error = ref(false)
+    const mostrar = ref(false)
 
     watch(mostrar, () => {
         if(mostrar.value) {
