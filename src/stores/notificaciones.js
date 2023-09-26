@@ -1,5 +1,5 @@
-import { ref, watch } from "vue";
-import { defineStore } from "pinia";
+import { ref, watch } from "vue"
+import { defineStore } from "pinia"
 
 export const useNotificacionStore = defineStore('notificacion', () => {
 
