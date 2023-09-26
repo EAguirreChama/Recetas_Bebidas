@@ -1,6 +1,6 @@
 <script setup>
     import Recetas from '../components/Recetas.vue'
-    import { useFavoritosStore } from '../stores/favoritos';
+    import { useFavoritosStore } from '../stores/favoritos'
     const favoritos = useFavoritosStore()
 </script>
 
