@@ -1,8 +1,8 @@
 import { ref, watch, onMounted, computed } from "vue"
 
 import { defineStore } from "pinia"
-import { useBebidasStore } from "./bebidas"
 import { useModalStore } from "./modal"
+import { useBebidasStore } from "./bebidas"
 import { useNotificacionStore } from "./notificaciones"
 
 export const useFavoritosStore = defineStore('favoritos', () => {
