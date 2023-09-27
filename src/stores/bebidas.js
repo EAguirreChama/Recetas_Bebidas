@@ -1,7 +1,7 @@
-import { ref, reactive, onMounted, computed } from 'vue'
-import { defineStore} from 'pinia'
 import axios from 'axios'
+import { defineStore} from 'pinia'
 import { useModalStore } from './modal'
+import { ref, reactive, onMounted, computed } from 'vue'
 
 import APIService from '../services/APIService'
 
